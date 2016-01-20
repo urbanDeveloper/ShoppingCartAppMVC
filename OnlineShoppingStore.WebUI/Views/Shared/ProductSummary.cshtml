@@ -1,0 +1,19 @@
+﻿@model OnlineShoppingStore.Domain.Entities.Product
+<!-- Partial Views - are used to encapsulate re - usable view logic and are a great means to simplify rge complexity of views
+    These Partial Views can be used on multiple views where we need similar logic -->
+
+<div class="well">
+    <h3>
+        <strong>@Model.Name</strong>
+        <span class="null-right label label-primary">@Model.Price.ToString("c")</span>
+    </h3>
+    @using (Html.BeginForm("AddToCart", "Cart"))
+    {
+        <div class="pull-right">
+            @Html.HiddenFor(x => x.ProductId)
+            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+            <input type="submit" class="btn btn-success" value="Add to cart">
+            </div>
+    }
+    <span class="lead">@Model.Description</span>
+</div>
