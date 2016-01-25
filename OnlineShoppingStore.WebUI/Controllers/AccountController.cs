@@ -1,15 +1,23 @@
-﻿using OnlineShoppingStore.WebUI.Models;
+﻿using OnlineShoppingStore.Domain.Abstract;
+using OnlineShoppingStore.WebUI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace OnlineShoppingStore.WebUI.Controllers
 {
     [Authorize]
     public class AccountController : Controller
     {
+        IAuthentication authentication;
+        public AccountController(IAuthentication authentication)
+        {
+            this.authentication = authentication;
+        }
+
         //ANYONE CAN ACCESS
         [AllowAnonymous]
         public ActionResult Login()
@@ -23,9 +31,10 @@ namespace OnlineShoppingStore.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                if ()
+                if (authentication.Authenticate(model.UserName, model.Password))
                 {
-
+                    FormsAuthentication.SetAuthCookie(model.UserName, false);
+                    return Redirect(returnUrl ?? Url.Action("Index", "Admin"));
                 }
                 else
                 {
@@ -39,5 +48,14 @@ namespace OnlineShoppingStore.WebUI.Controllers
             }
         
         }
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+
+            return RedirectToAction("Index", "Admin");
+        }
+        //#TODO Need To Create Change Password- Methods
+        //#TODO Need To Create Forget Password - Methods
     }
 }

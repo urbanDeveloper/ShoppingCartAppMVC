@@ -8,11 +8,12 @@ namespace OnlineShoppingStore.Domain.Concrete
 {
     public class EmailSettings
     {
-        public string MailToAddress = "sunny.chaya.patel@gmail.com";
-        public string MailFromAddress = "sunny.chaya.patel@gmail.com";
+        // need to add email address details here
+        public string MailToAddress = " ";
+        public string MailFromAddress = " ";
         public bool UseSsl = true;
-        public string Username = "sunny.chaya.patel@gmail.com";
-        public string Password = "";
+        public string Username = " ";
+        public string Password = " ";
         public string ServerName = "smtp.gmail.com";
         public int ServerPort = 587;
 

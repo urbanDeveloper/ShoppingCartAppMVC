@@ -20,3 +20,6 @@ C:\Users\Sunny\Documents\Visual Studio 2015\Projects\OnlineShoppingStore\OnlineS
 C:\Users\Sunny\Documents\Visual Studio 2015\Projects\OnlineShoppingStore\OnlineShoppingStore.Domain\bin\Debug\System.Web.WebPages.xml
 C:\Users\Sunny\Documents\Visual Studio 2015\Projects\OnlineShoppingStore\OnlineShoppingStore.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\Sunny\Documents\Visual Studio 2015\Projects\OnlineShoppingStore\OnlineShoppingStore.Domain\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Sunny\Documents\Visual Studio 2015\Projects\OnlineShoppingStore\OnlineShoppingStore.Domain\obj\Debug\OnlineShoppingStore.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Sunny\Documents\Visual Studio 2015\Projects\OnlineShoppingStore\OnlineShoppingStore.Domain\obj\Debug\OnlineShoppingStore.Domain.Migrations.initial.resources
+C:\Users\Sunny\Documents\Visual Studio 2015\Projects\OnlineShoppingStore\OnlineShoppingStore.Domain\obj\Debug\OnlineShoppingStore.Domain.csproj.GenerateResource.Cache
